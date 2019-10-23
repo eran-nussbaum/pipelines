@@ -145,7 +145,7 @@ class Router extends React.Component<{}, RouteComponentState> {
                   refresh={this.state.bannerProps.refresh} />}
               <Switch>
                 <Route exact={true} path={'/'} render={({ ...props }) => (
-                  <Redirect to={RoutePage.PIPELINES} {...props} />
+                  <Redirect to={RoutePage.EXPERIMENTS} {...props} />
                 )} />
                 {routes.map((route, i) => {
                   const { path, Component, ...otherProps } = { ...route };

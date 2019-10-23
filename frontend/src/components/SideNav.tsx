@@ -223,8 +223,8 @@ export default class SideNav extends React.Component<SideNavProps, SideNavState>
     return (
       <div id='sideNav' className={classes(css.root, commonCss.flexColumn, commonCss.noShrink, collapsed && css.collapsedRoot)}>
         <div style={{ flexGrow: 1 }}>
-          <div className={classes(css.indicator, !page.startsWith(RoutePage.PIPELINES) && css.indicatorHidden)} />
-          <Tooltip title={'Pipeline List'} enterDelay={300} placement={'right-start'}
+          <div style={{display: 'none'}} className={classes(css.indicator, !page.startsWith(RoutePage.PIPELINES) && css.indicatorHidden)} />
+          <Tooltip style={{display: 'none'}} title={'Pipeline List'} enterDelay={300} placement={'right-start'}
             disableFocusListener={!collapsed} disableHoverListener={!collapsed}
             disableTouchListener={!collapsed}>
             <Link id='pipelinesBtn' to={RoutePage.PIPELINES} className={commonCss.unstyled}>
